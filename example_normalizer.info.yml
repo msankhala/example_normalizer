@@ -1,0 +1,6 @@
+name: Example Normalizer
+type: module
+description: 'Using Normalizers to Alter REST JSON Structure in Drupal 8'
+package: Custom
+version: VERSION
+core: 8.x
