@@ -1,0 +1,17 @@
+services:
+  example_normalizer.typed_data:
+  class: Drupal\example_normalizer\Normalizer\CustomTypedDataNormalizer
+  tags:
+  - { name: normalizer, priority: 2 }
+
+  example_normalizer.node_entity:
+    class: Drupal\example_normalizer\Normalizer\NodeEntityNormalizer
+      arguments: ['@entity.manager']
+      tags:
+      - { name: normalizer, priority: 8 }
+
+  example_normalizer.article_node_entity:
+    class: Drupal\example_normalizer\Normalizer\ArticleNodeEntityNormalizer
+      arguments: ['@entity.manager']
+      tags:
+      - { name: normalizer, priority: 9 }
